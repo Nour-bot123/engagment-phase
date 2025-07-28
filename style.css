@@ -1,0 +1,88 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    background-size: cover;
+
+}
+
+.nav-bar {
+    color: #000;
+    background-color: rgb(86, 172, 0);
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    padding: 15px 0
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar li {
+
+    
+    cursor: pointer;
+    margin: 0 150px;
+    transition: 0.3s;
+}
+
+.nav-bar li:hover {
+    background-color: rgb(82, 163, 0);
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0.2);
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: rgb(0, 0, 0);
+}
+
+#About-the-project{
+    text-align: center;
+    margin: 20px;
+    background-color: rgb(86, 172, 0);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    opacity: 0.7;
+    transition: 0.3s ease;
+
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+}
+
+#About-the-project:hover {
+    transition: 0.3s ease;
+    opacity: 1;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0.2);
+}
+
+.center-image {
+    display: block;
+    margin: 40px auto;      /* Centers the image horizontally */
+    border-radius: 30px;    /* Rounded corners */
+    max-width: 60%;         /* Responsive width */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2); /* Optional: subtle shadow */
+}
+
