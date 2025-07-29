@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment | Plantify Business Solutions</title>
+  <link rel="stylesheet" href="pay.css">
+</head>
+<body>
+  <section class="pay-section">
+    <div class="pay-container">
+      <h2>Complete Your Payment</h2>
+      <form class="pay-form">
+        <label for="plan">Selected Plan</label>
+        <select id="plan" name="plan" required>
+          <option value="basic">Basic - $19/mo</option>
+          <option value="gold">Gold - $49/mo</option>
+          <option value="premium">Premium - $99/mo</option>
+        </select>
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your Name">
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="you@email.com">
+
+        <label for="card">Card Number</label>
+        <input type="text" id="card" name="card" required maxlength="19" placeholder="1234 5678 9012 3456">
+
+        <div class="pay-row">
+          <div>
+            <label for="expiry">Expiry</label>
+            <input type="text" id="expiry" name="expiry" required maxlength="5" placeholder="MM/YY">
+          </div>
+          <div>
+            <label for="cvc">CVC</label>
+            <input type="text" id="cvc" name="cvc" required maxlength="4" placeholder="CVC">
+          </div>
+        </div>
+
+        <button type="submit" class="pay-btn">Pay Now</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
