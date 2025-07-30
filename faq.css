@@ -1,0 +1,149 @@
+body {
+  background: #f6fdf7;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #145a32;
+  margin: 0;
+  padding: 0;
+}
+
+.faq-header {
+  background: linear-gradient(90deg, #27ae60 0%, #145a32 100%);
+  color: #fff;
+  text-align: center;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  position: relative;
+}
+
+.faq-logo {
+  height: 48px;
+  width: auto;
+  vertical-align: middle;
+  margin-bottom: 0.5rem;
+}
+
+.faq-header h1 {
+  margin: 0.5rem 0 0.2rem 0;
+  font-size: 2.3rem;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #eafaf1;
+  margin-bottom: 0;
+}
+
+.faq-main {
+  max-width: 700px;
+  margin: 2.5rem auto 2rem auto;
+  padding: 0 1rem;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(20, 90, 50, 0.07);
+  padding: 0.5rem 1.2rem;
+  transition: box-shadow 0.2s;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #27ae60;
+  font-size: 1.13rem;
+  font-weight: bold;
+  text-align: left;
+  padding: 1rem 0;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.2s;
+  position: relative;
+}
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 1.1rem;
+  font-size: 1.3rem;
+  color: #145a32;
+  transition: transform 0.2s;
+}
+.faq-question.active {
+  color: #145a32;
+}
+.faq-question.active::after {
+  content: '-';
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1);
+  color: #145a32;
+  font-size: 1.05rem;
+  padding: 0 0.2rem;
+}
+.faq-answer.open {
+  max-height: 200px;
+  padding-bottom: 1rem;
+}
+
+.faq-answer a {
+  color: #27ae60;
+  text-decoration: underline;
+}
+
+.faq-footer {
+  background: #eafaf1;
+  color: #145a32;
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+  font-size: 1.1rem;
+  border-top: 2px solid #a5d6a7;
+  margin-top: 3rem;
+}
+
+.back-btn {
+  position: fixed;
+  bottom: 32px;
+  left: 32px;
+  background: #145a32;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 0.7em 1.6em;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(20,90,50,0.10);
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.2s;
+}
+.back-btn:hover {
+  background: #27ae60;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .faq-main {
+    padding: 0 0.2rem;
+  }
+  .faq-header h1 {
+    font-size: 1.3rem;
+  }
+  .back-btn {
+    left: 10px;
+    bottom: 10px;
+    padding: 0.6em 1.1em;
+    font-size: 1rem;
+  }
+}
