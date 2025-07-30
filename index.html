@@ -4,19 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Auto Water Pump</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="imgs/img1.png">
 </head>
 <body>
-  <header class="navbar">
-    <nav>
-      <ul>
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="bussines plan.html">Our business plan</a></li>
-      </ul>
-    </nav>
+  <header class="navbar advanced-navbar">
+    <div class="navbar-container">
+      <a href="#" class="navbar-logo">
+        <img src="imgs/img2.png" alt="Logo" class="navbar-logo-img" style="height:32px;width:auto;vertical-align:middle;margin-right:10px;">
+        RAAMN
+      </a>
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav class="navbar-menu" id="navbar-menu">
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="dropdown">
+            <a href="#">More <span>&#9662;</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="bussines plan.html">Our business plan</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="login.html" class="login-nav-btn">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <section id="overview" class="section">
@@ -77,6 +99,37 @@
       <a href="#">Instagram</a> for tips and updates!
     </p>
   </section>
+
+  <!-- Social Icons -->
+  <div class="social-icons">
+    <a href="https://facebook.com/" target="_blank" class="social-icon facebook" aria-label="Facebook">
+      <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook">
+    </a>
+    <a href="https://instagram.com/" target="_blank" class="social-icon instagram" aria-label="Instagram">
+      <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram">
+    </a>
+    <a href="https://wa.me/" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
+      <img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp">
+    </a>
+  </div>
+
+  <form class="login-form" id="loginForm" autocomplete="off">
+  </form>
+
   <script src="features-hover.js"></script>
+  <script src="index.js"></script>
+  <script>
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const username = document.getElementById('username').value.trim();
+  const password = document.getElementById('password').value.trim();
+  if(username && password) {
+    // Simulate successful login
+    window.location.href = "index.html";
+  } else {
+    alert("Please enter both username and password.");
+  }
+});
+</script>
 </body>
 </html>

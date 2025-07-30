@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Auto Water Pump</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="icon" type="image/png" href="imgs/img1.png">
+</head>
+<body>
+  <div class="login-container">
+    <form class="login-form" id="loginForm" autocomplete="off">
+      <img src="imgs/img2.png" alt="Logo" class="login-logo">
+      <h2>Welcome Back!</h2>
+      <p class="login-desc">Sign in to manage your smart plant system.</p>
+      <div id="login-error" style="color:#d32f2f; margin-bottom:10px; display:none;"></div>
+      <label for="username">Username or Email</label>
+      <input type="text" id="username" name="username" required placeholder="Enter your username or email">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required placeholder="Enter your password">
+      <button type="submit" class="login-btn">Login</button>
+      <p class="login-footer">Don't have an account? <a href="signup.html">Sign up</a></p>
+    </form>
+  </div>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const usernameOrEmail = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const errorDiv = document.getElementById('login-error');
+      const savedEmail = localStorage.getItem('userEmail');
+      const savedPassword = localStorage.getItem('userPassword');
+      const savedUsername = localStorage.getItem('userName');
+
+      if (!usernameOrEmail) {
+        errorDiv.textContent = "Please enter your email or username.";
+        errorDiv.style.display = "block";
+      } else if (!password) {
+        errorDiv.textContent = "Please enter your password.";
+        errorDiv.style.display = "block";
+      } else if (
+        (usernameOrEmail !== savedEmail && usernameOrEmail !== savedUsername) &&
+        password !== savedPassword
+      ) {
+        errorDiv.textContent = "Both email/username and password are incorrect.";
+        errorDiv.style.display = "block";
+      } else if (usernameOrEmail !== savedEmail && usernameOrEmail !== savedUsername) {
+        errorDiv.textContent = "Email or username is incorrect.";
+        errorDiv.style.display = "block";
+      } else if (password !== savedPassword) {
+        errorDiv.textContent = "Password is incorrect.";
+        errorDiv.style.display = "block";
+      } else {
+        errorDiv.style.display = "none";
+        window.location.href = "index.html";
+      }
+    });
+  </script>
+</body>
+</html>

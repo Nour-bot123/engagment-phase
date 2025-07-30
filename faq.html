@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Auto Water Pump</title>
+  <link rel="stylesheet" href="css/faq.css">
+  <link rel="icon" type="image/png" href="imgs/img2.png">
+</head>
+<body>
+  <button class="back-btn" onclick="window.history.back()">&#8592; Back</button>
+  <header class="faq-header">
+    <img src="imgs/img2.png" alt="Logo" class="faq-logo">
+    <h1>Frequently Asked Questions</h1>
+    <p class="subtitle">Everything you need to know about Auto Water Pump</p>
+  </header>
+  <main class="faq-main">
+    <section class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">How does the Auto Water Pump work?</button>
+        <div class="faq-answer">
+          <p>
+            Our system uses smart soil moisture sensors to detect when your plant needs water. When the soil is dry, the pump automatically delivers the right amount of water.
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can I use it for outdoor plants?</button>
+        <div class="faq-answer">
+          <p>
+            Yes! The Auto Water Pump is designed for both indoor and outdoor use. Just make sure the sensors and electronics are protected from heavy rain.
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How do I set up scheduled watering?</button>
+        <div class="faq-answer">
+          <p>
+            You can set custom watering times using our mobile app or web dashboard. The system will follow your schedule and adjust based on soil moisture.
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Will I get notifications if something is wrong?</button>
+        <div class="faq-answer">
+          <p>
+            Absolutely! You’ll receive instant mobile notifications if your plant needs attention, water is running low, or there’s a system error.
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is it energy efficient?</button>
+        <div class="faq-answer">
+          <p>
+            Yes, our system uses minimal power and is designed to be energy efficient, so you can care for your plants and the planet.
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What if I have more questions?</button>
+        <div class="faq-answer">
+          <p>
+            You can always contact us at <a href="mailto:info@waterpump.com">info@waterpump.com</a> or visit our <a href="blog.html">Blog</a> for more tips!
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="faq-footer">
+    &copy; 2025 Plantify FAQ. All rights reserved.
+  </footer>
+  <script>
+    // FAQ accordion functionality
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const answer = this.nextElementSibling;
+        answer.classList.toggle('open');
+        this.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="business plan.css">
+    <link rel="stylesheet" href="css/business plan.css">
     <title>bussines plans</title>
 </head>
 <body>
+    <button class="back-btn" onclick="window.history.back()">&#8592; Back</button>
     <section class="section plans-section">
       <div class="container">
         <h2>Our Business Plans</h2>
@@ -16,23 +17,36 @@
             <img src="https://img.icons8.com/color/96/leaf.png" alt="Basic Plan" class="plan-icon"/>
             <h3>Basic Plan</h3>
             <p>Perfect for small businesses starting to grow. Includes essential features and support.</p>
-            <ul>
-              <li>Starter analytics</li>
-              <li>Email support</li>
-              <li>1 user</li>
-            </ul>
+            <table class="plan-features">
+              <tr><td>Starter analytics</td><td><span class="icon-true"></span></td></tr>
+              <tr><td>Advanced analytics</td><td><span class="icon-false"></span></td></tr>
+              <tr><td>Full analytics suite</td><td><span class="icon-false"></span></td></tr>
+              <tr><td>Email support</td><td><span class="icon-true"></span></td></tr>
+              <tr><td>Priority email support</td><td><span class="icon-false"></span></td></tr>
+              <tr><td>24/7 support</td><td><span class="icon-false"></span></td></tr>
+              <tr><td>1 user</td><td><span class="icon-true"></span></td></tr>
+              <tr><td>Up to 5 users</td><td><span class="icon-false"></span></td></tr>
+              <tr><td>Unlimited users</td><td><span class="icon-false"></span></td></tr>
+            </table>
             <a href="pay.html" class="plan-price">Buy for $19/mo</a>
           </div>
-          <div class="plan-card gold">
+          <div class="plan-card gold most-popular">
+            <div class="popular-badge">Most Popular</div>
             <!-- Gold Plan -->
             <img src="https://img.icons8.com/color/96/medal2--v1.png" alt="Gold Plan" class="plan-icon"/>
             <h3>Gold Plan</h3>
             <p>Ideal for growing teams. Enhanced features and priority support to help you flourish.</p>
-            <ul>
-              <li>Advanced analytics</li>
-              <li>Priority email support</li>
-              <li>Up to 5 users</li>
-            </ul>
+            <table class="plan-features">
+              <tr><td>Starter analytics</td><td><span class="icon-true"></span></td></tr>
+              <tr><td>Advanced analytics</td><td><span class="icon-true"></span></td></tr>
+              <tr><td>Full analytics suite</td><td><span class="icon-false"></span></td></tr>
+              <tr><td>Email support</td><td><span class="icon-true"></span></td></tr>
+              <tr><td>Priority email support</td><td><span class="icon-true"></span></td></tr>
+              <tr><td>24/7 support</td><td><span class="icon-false"></span></td></tr>
+              <tr><td>1 user</td><td><span class="icon-false"></span></td></tr>
+              <tr><td>Up to 5 users</td><td><span class="icon-true"></span></td></tr>
+              <tr><td>Unlimited users</td><td><span class="icon-false"></span></td></tr>
+            </table>
             <a href="pay.html" class="plan-price">Buy for $49/mo</a>
           </div>
           <div class="plan-card premium">
@@ -40,11 +54,17 @@
             <img src="https://img.icons8.com/color/96/diamond.png" alt="Premium Plan" class="plan-icon"/>
             <h3>Premium Plan</h3>
             <p>For established businesses ready to branch out. All features and dedicated support.</p>
-            <ul>
-              <li>Full analytics suite</li>
-              <li>24/7 support</li>
-              <li>Unlimited users</li>
-            </ul>
+            <table class="plan-features">
+              <tr><td>Starter analytics</td><td><span class="icon-true"></span></td></tr>
+              <tr><td>Advanced analytics</td><td><span class="icon-true"></span></td></tr>
+              <tr><td>Full analytics suite</td><td><span class="icon-true"></span></td></tr>
+              <tr><td>Email support</td><td><span class="icon-true"></span></td></tr>
+              <tr><td>Priority email support</td><td><span class="icon-true"></span></td></tr>
+              <tr><td>24/7 support</td><td><span class="icon-true"></span></td></tr>
+              <tr><td>1 user</td><td><span class="icon-false"></span></td></tr>
+              <tr><td>Up to 5 users</td><td><span class="icon-false"></span></td></tr>
+              <tr><td>Unlimited users</td><td><span class="icon-true"></span></td></tr>
+            </table>
             <a href="pay.html" class="plan-price">Buy for $99/mo</a>
           </div>
         </div>

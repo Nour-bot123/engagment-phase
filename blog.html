@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Care Blog | Auto Water Pump</title>
+  <link rel="stylesheet" href="css/blog.css">
+  <link rel="icon" type="image/png" href="imgs/img2.png">
+</head>
+<body>
+  <button class="back-btn" onclick="window.history.back()">&#8592; Back</button>
+  <header class="blog-header">
+    <img src="imgs/img2.png" alt="Logo" class="blog-logo">
+    <h1>Plant Care Blog</h1>
+    <p class="subtitle">Tips, stories, and inspiration for every plant lover</p>
+  </header>
+  <main class="blog-main">
+    <article class="blog-post">
+      <img src="https://img.icons8.com/color/96/plant-under-sun.png" alt="Healthy Plant" class="post-img">
+      <h2>5 Secrets to Healthier Houseplants</h2>
+      <div class="post-meta">By Sarah Green • July 2025</div>
+      <p>
+        Want thriving houseplants? Start with the basics: sunlight, water, and the right soil. But don’t forget about humidity and regular cleaning! Discover how our Auto Water Pump makes watering effortless and keeps your plants happy.
+      </p>
+      <a href="#" class="read-more">Read More</a>
+      <div class="post-more">
+        <ul>
+          <li><strong>1. Light:</strong> Place your plants where they get the right amount of sunlight. Too much or too little can harm them.</li>
+          <li><strong>2. Water:</strong> Water only when the soil is dry. Overwatering is a common mistake—our Auto Water Pump solves this by sensing soil moisture.</li>
+          <li><strong>3. Humidity:</strong> Many houseplants love humidity. Mist them or use a pebble tray for best results.</li>
+          <li><strong>4. Clean Leaves:</strong> Dust can block sunlight. Wipe leaves gently with a damp cloth every few weeks.</li>
+          <li><strong>5. Fertilize:</strong> Use a balanced fertilizer during the growing season for lush, healthy growth.</li>
+        </ul>
+        <p>
+          <strong>Bonus:</strong> With Auto Water Pump, you can automate watering and get notifications if your plant needs attention. No more guessing—just healthy, happy plants!
+        </p>
+      </div>
+    </article>
+    <article class="blog-post">
+      <img src="https://img.icons8.com/color/96/watering-can.png" alt="Watering" class="post-img">
+      <h2>How Often Should You Water?</h2>
+      <div class="post-meta">By Plantify Team • June 2025</div>
+      <p>
+        Overwatering is the #1 killer of houseplants. Learn how our smart sensors take the guesswork out of watering, and get tips for different plant types and seasons.
+      </p>
+      <a href="#" class="read-more">Read More</a>
+      <div class="post-more">
+        <ul>
+          <li><strong>Succulents & Cacti:</strong> Water every 2-3 weeks, letting soil dry completely between waterings.</li>
+          <li><strong>Ferns & Tropical Plants:</strong> Keep soil consistently moist, but not soggy. Water when the top inch feels dry.</li>
+          <li><strong>Seasonal Changes:</strong> Plants need less water in winter and more in summer. Adjust your schedule accordingly.</li>
+          <li><strong>Smart Sensors:</strong> Our Auto Water Pump uses sensors to water only when needed, preventing root rot and stress.</li>
+        </ul>
+        <p>
+          <strong>Tip:</strong> Always check the soil before watering. With automation, you’ll never have to worry about over- or under-watering again!
+        </p>
+      </div>
+    </article>
+    <article class="blog-post">
+      <img src="https://img.icons8.com/color/96/automatic.png" alt="Automation" class="post-img">
+      <h2>Automate Your Plant Care Routine</h2>
+      <div class="post-meta">By Omar Leafy • May 2025</div>
+      <p>
+        Busy schedule? No problem! See how automation can help you grow a lush indoor jungle with minimal effort, and why Auto Water Pump is the perfect companion for plant parents.
+      </p>
+      <a href="#" class="read-more">Read More</a>
+      <div class="post-more">
+        <ul>
+          <li><strong>Save Time:</strong> Automation means you don’t have to remember watering schedules—your plants are always cared for.</li>
+          <li><strong>Peace of Mind:</strong> Get notifications if water is low or if your plant needs attention, even when you’re away.</li>
+          <li><strong>Consistency:</strong> Plants thrive on routine. Automated watering ensures they get the right amount every time.</li>
+          <li><strong>Easy Setup:</strong> Our system is simple to install and works with most pots and planters.</li>
+        </ul>
+        <p>
+          <strong>Why Choose Auto Water Pump?</strong> Because your plants deserve the best care, and you deserve more free time!
+        </p>
+      </div>
+    </article>
+  </main>
+  <footer class="blog-footer">
+    &copy; 2025 Plantify Blog. All rights reserved.
+  </footer>
+  <script>
+document.querySelectorAll('.read-more').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const post = this.closest('.blog-post');
+    post.classList.toggle('open');
+    this.textContent = post.classList.contains('open') ? 'Show Less' : 'Read More';
+  });
+});
+</script>
+</body>
+</html>

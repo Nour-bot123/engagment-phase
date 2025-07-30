@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up | Auto Water Pump</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="icon" type="image/png" href="imgs/img1.png">
+</head>
+<body>
+  <div class="login-container">
+    <form class="login-form" id="signupForm" autocomplete="off">
+      <img src="imgs/img2.png" alt="Logo" class="login-logo">
+      <h2>Create Account</h2>
+      <p class="login-desc">Sign up to start caring for your plants the smart way!</p>
+      <label for="new-email">Email</label>
+      <input type="email" id="new-email" name="new-email" required placeholder="Enter your email">
+      <label for="new-password">Password</label>
+      <input type="password" id="new-password" name="new-password" required placeholder="Create a password">
+      <button type="submit" class="login-btn">Sign Up</button>
+      <p class="login-footer">Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('new-email').value.trim();
+      const password = document.getElementById('new-password').value.trim();
+      if(email && password) {
+        // Save to localStorage
+        localStorage.setItem('userEmail', email);
+        localStorage.setItem('userPassword', password);
+        alert('Account created! You can now log in.');
+        window.location.href = "login.html";
+      }
+    });
+  </script>
+</body>
+</html>
